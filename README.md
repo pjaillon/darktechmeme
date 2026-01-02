@@ -24,3 +24,8 @@ Example:
 
 ## App Store
 See `darktechmeme-safari/APP_STORE_CHECKLIST.md` for submission steps.
+
+## Disclaimer
+- This project is not affiliated with Techmeme, Apple, or any third-party sites linked on Techmeme.
+- “Techmeme” and related marks are property of their respective owners.
+- Use at your own risk; you are responsible for complying with all relevant terms of service. 
