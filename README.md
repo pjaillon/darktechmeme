@@ -1,6 +1,9 @@
 # darktechmeme
 
 Safari Web Extension that applies a dark-mode theme to techmeme.com on macOS (and iOS via the iOS app target).
+Example:
+<img width="1164" height="1204" alt="image" src="https://github.com/user-attachments/assets/2e083b67-460b-4e02-9823-d7c1c94ea740" />
+
 
 ## Project layout
 - `darktechmeme/` — web extension source (manifest, CSS, icons)
