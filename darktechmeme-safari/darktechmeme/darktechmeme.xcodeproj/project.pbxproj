@@ -1,0 +1,993 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6791AEE62F08596A0074A64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEE52F08596A0074A64E /* AppDelegate.swift */; };
+		6791AEE82F08596A0074A64E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEE72F08596A0074A64E /* SceneDelegate.swift */; };
+		6791AEEB2F08596A0074A64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6791AEE92F08596A0074A64E /* LaunchScreen.storyboard */; };
+		6791AEEE2F08596A0074A64E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6791AEEC2F08596A0074A64E /* Main.storyboard */; };
+		6791AEF72F08596A0074A64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEF62F08596A0074A64E /* AppDelegate.swift */; };
+		6791AEFA2F08596A0074A64E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6791AEF82F08596A0074A64E /* Main.storyboard */; };
+		6791AF012F08596A0074A64E /* darktechmeme Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6791AF002F08596A0074A64E /* darktechmeme Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6791AF0B2F08596A0074A64E /* darktechmeme Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6791AF0A2F08596A0074A64E /* darktechmeme Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6791AF102F08596A0074A64E /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED52F0859690074A64E /* Main.html */; };
+		6791AF112F08596A0074A64E /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED52F0859690074A64E /* Main.html */; };
+		6791AF122F08596A0074A64E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED72F0859690074A64E /* Icon.png */; };
+		6791AF132F08596A0074A64E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED72F0859690074A64E /* Icon.png */; };
+		6791AF142F08596A0074A64E /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED82F0859690074A64E /* Style.css */; };
+		6791AF152F08596A0074A64E /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED82F0859690074A64E /* Style.css */; };
+		6791AF162F08596A0074A64E /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED92F0859690074A64E /* Script.js */; };
+		6791AF172F08596A0074A64E /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AED92F0859690074A64E /* Script.js */; };
+		6791AF182F08596A0074A64E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEDA2F0859690074A64E /* ViewController.swift */; };
+		6791AF192F08596A0074A64E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEDA2F0859690074A64E /* ViewController.swift */; };
+		6791AF1A2F08596A0074A64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6791AEDB2F08596A0074A64E /* Assets.xcassets */; };
+		6791AF1B2F08596A0074A64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6791AEDB2F08596A0074A64E /* Assets.xcassets */; };
+		6791AF1C2F08596A0074A64E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEDD2F08596A0074A64E /* SafariWebExtensionHandler.swift */; };
+		6791AF1D2F08596A0074A64E /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6791AEDD2F08596A0074A64E /* SafariWebExtensionHandler.swift */; };
+		6791AF332F08596A0074A64E /* dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF2F2F08596A0074A64E /* dark.css */; };
+		6791AF342F08596A0074A64E /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF302F08596A0074A64E /* icons */; };
+		6791AF352F08596A0074A64E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF312F08596A0074A64E /* manifest.json */; };
+		6791AF362F08596A0074A64E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF322F08596A0074A64E /* content.js */; };
+		6791AF372F08596A0074A64E /* dark.css in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF2F2F08596A0074A64E /* dark.css */; };
+		6791AF382F08596A0074A64E /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF302F08596A0074A64E /* icons */; };
+		6791AF392F08596A0074A64E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF312F08596A0074A64E /* manifest.json */; };
+		6791AF3A2F08596A0074A64E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF322F08596A0074A64E /* content.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6791AF022F08596A0074A64E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6791AECF2F0859690074A64E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6791AEFF2F08596A0074A64E;
+			remoteInfo = "darktechmeme Extension (iOS)";
+		};
+		6791AF0C2F08596A0074A64E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6791AECF2F0859690074A64E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6791AF092F08596A0074A64E;
+			remoteInfo = "darktechmeme Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6791AF232F08596A0074A64E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6791AF012F08596A0074A64E /* darktechmeme Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AF2A2F08596A0074A64E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6791AF0B2F08596A0074A64E /* darktechmeme Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6791AED62F0859690074A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		6791AED72F0859690074A64E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6791AED82F0859690074A64E /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		6791AED92F0859690074A64E /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		6791AEDA2F0859690074A64E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6791AEDB2F08596A0074A64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6791AEDD2F08596A0074A64E /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		6791AEE22F08596A0074A64E /* darktechmeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = darktechmeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6791AEE52F08596A0074A64E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6791AEE72F08596A0074A64E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6791AEEA2F08596A0074A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6791AEED2F08596A0074A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6791AEEF2F08596A0074A64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6791AEF42F08596A0074A64E /* darktechmeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = darktechmeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6791AEF62F08596A0074A64E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6791AEF92F08596A0074A64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6791AEFB2F08596A0074A64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6791AF002F08596A0074A64E /* darktechmeme Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "darktechmeme Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6791AF052F08596A0074A64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6791AF0A2F08596A0074A64E /* darktechmeme Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "darktechmeme Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6791AF0F2F08596A0074A64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6791AF2F2F08596A0074A64E /* dark.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = dark.css; path = Resources/dark.css; sourceTree = "<group>"; };
+		6791AF302F08596A0074A64E /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
+		6791AF312F08596A0074A64E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
+		6791AF322F08596A0074A64E /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6791AEDF2F08596A0074A64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEF12F08596A0074A64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEFD2F08596A0074A64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AF072F08596A0074A64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6791AECE2F0859690074A64E = {
+			isa = PBXGroup;
+			children = (
+				6791AED32F0859690074A64E /* Shared (App) */,
+				6791AEDC2F08596A0074A64E /* Shared (Extension) */,
+				6791AEE42F08596A0074A64E /* iOS (App) */,
+				6791AEF52F08596A0074A64E /* macOS (App) */,
+				6791AF042F08596A0074A64E /* iOS (Extension) */,
+				6791AF0E2F08596A0074A64E /* macOS (Extension) */,
+				6791AEE32F08596A0074A64E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6791AED32F0859690074A64E /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AEDA2F0859690074A64E /* ViewController.swift */,
+				6791AEDB2F08596A0074A64E /* Assets.xcassets */,
+				6791AED42F0859690074A64E /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		6791AED42F0859690074A64E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6791AED52F0859690074A64E /* Main.html */,
+				6791AED72F0859690074A64E /* Icon.png */,
+				6791AED82F0859690074A64E /* Style.css */,
+				6791AED92F0859690074A64E /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6791AEDC2F08596A0074A64E /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AF2E2F08596A0074A64E /* Resources */,
+				6791AEDD2F08596A0074A64E /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		6791AEE32F08596A0074A64E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6791AEE22F08596A0074A64E /* darktechmeme.app */,
+				6791AEF42F08596A0074A64E /* darktechmeme.app */,
+				6791AF002F08596A0074A64E /* darktechmeme Extension.appex */,
+				6791AF0A2F08596A0074A64E /* darktechmeme Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6791AEE42F08596A0074A64E /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AEE52F08596A0074A64E /* AppDelegate.swift */,
+				6791AEE72F08596A0074A64E /* SceneDelegate.swift */,
+				6791AEE92F08596A0074A64E /* LaunchScreen.storyboard */,
+				6791AEEC2F08596A0074A64E /* Main.storyboard */,
+				6791AEEF2F08596A0074A64E /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		6791AEF52F08596A0074A64E /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AEF62F08596A0074A64E /* AppDelegate.swift */,
+				6791AEF82F08596A0074A64E /* Main.storyboard */,
+				6791AEFB2F08596A0074A64E /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		6791AF042F08596A0074A64E /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AF052F08596A0074A64E /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		6791AF0E2F08596A0074A64E /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				6791AF0F2F08596A0074A64E /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		6791AF2E2F08596A0074A64E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6791AF2F2F08596A0074A64E /* dark.css */,
+				6791AF302F08596A0074A64E /* icons */,
+				6791AF312F08596A0074A64E /* manifest.json */,
+				6791AF322F08596A0074A64E /* content.js */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6791AEE12F08596A0074A64E /* darktechmeme (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6791AF242F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme (iOS)" */;
+			buildPhases = (
+				6791AEDE2F08596A0074A64E /* Sources */,
+				6791AEDF2F08596A0074A64E /* Frameworks */,
+				6791AEE02F08596A0074A64E /* Resources */,
+				6791AF232F08596A0074A64E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6791AF032F08596A0074A64E /* PBXTargetDependency */,
+			);
+			name = "darktechmeme (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "darktechmeme (iOS)";
+			productReference = 6791AEE22F08596A0074A64E /* darktechmeme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6791AEF32F08596A0074A64E /* darktechmeme (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6791AF2B2F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme (macOS)" */;
+			buildPhases = (
+				6791AEF02F08596A0074A64E /* Sources */,
+				6791AEF12F08596A0074A64E /* Frameworks */,
+				6791AEF22F08596A0074A64E /* Resources */,
+				6791AF2A2F08596A0074A64E /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6791AF0D2F08596A0074A64E /* PBXTargetDependency */,
+			);
+			name = "darktechmeme (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "darktechmeme (macOS)";
+			productReference = 6791AEF42F08596A0074A64E /* darktechmeme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6791AEFF2F08596A0074A64E /* darktechmeme Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6791AF202F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme Extension (iOS)" */;
+			buildPhases = (
+				6791AEFC2F08596A0074A64E /* Sources */,
+				6791AEFD2F08596A0074A64E /* Frameworks */,
+				6791AEFE2F08596A0074A64E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "darktechmeme Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "darktechmeme Extension (iOS)";
+			productReference = 6791AF002F08596A0074A64E /* darktechmeme Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6791AF092F08596A0074A64E /* darktechmeme Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6791AF272F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme Extension (macOS)" */;
+			buildPhases = (
+				6791AF062F08596A0074A64E /* Sources */,
+				6791AF072F08596A0074A64E /* Frameworks */,
+				6791AF082F08596A0074A64E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "darktechmeme Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "darktechmeme Extension (macOS)";
+			productReference = 6791AF0A2F08596A0074A64E /* darktechmeme Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6791AECF2F0859690074A64E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					6791AEE12F08596A0074A64E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					6791AEF32F08596A0074A64E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					6791AEFF2F08596A0074A64E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					6791AF092F08596A0074A64E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 6791AED22F0859690074A64E /* Build configuration list for PBXProject "darktechmeme" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6791AECE2F0859690074A64E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6791AEE32F08596A0074A64E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6791AEE12F08596A0074A64E /* darktechmeme (iOS) */,
+				6791AEF32F08596A0074A64E /* darktechmeme (macOS) */,
+				6791AEFF2F08596A0074A64E /* darktechmeme Extension (iOS) */,
+				6791AF092F08596A0074A64E /* darktechmeme Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6791AEE02F08596A0074A64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF122F08596A0074A64E /* Icon.png in Resources */,
+				6791AEEB2F08596A0074A64E /* LaunchScreen.storyboard in Resources */,
+				6791AF102F08596A0074A64E /* Main.html in Resources */,
+				6791AF162F08596A0074A64E /* Script.js in Resources */,
+				6791AF1A2F08596A0074A64E /* Assets.xcassets in Resources */,
+				6791AEEE2F08596A0074A64E /* Main.storyboard in Resources */,
+				6791AF142F08596A0074A64E /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEF22F08596A0074A64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF132F08596A0074A64E /* Icon.png in Resources */,
+				6791AF152F08596A0074A64E /* Style.css in Resources */,
+				6791AEFA2F08596A0074A64E /* Main.storyboard in Resources */,
+				6791AF172F08596A0074A64E /* Script.js in Resources */,
+				6791AF1B2F08596A0074A64E /* Assets.xcassets in Resources */,
+				6791AF112F08596A0074A64E /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEFE2F08596A0074A64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF3A2F08596A0074A64E /* content.js in Resources */,
+				6791AF372F08596A0074A64E /* dark.css in Resources */,
+				6791AF392F08596A0074A64E /* manifest.json in Resources */,
+				6791AF382F08596A0074A64E /* icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AF082F08596A0074A64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF362F08596A0074A64E /* content.js in Resources */,
+				6791AF332F08596A0074A64E /* dark.css in Resources */,
+				6791AF352F08596A0074A64E /* manifest.json in Resources */,
+				6791AF342F08596A0074A64E /* icons in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6791AEDE2F08596A0074A64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF182F08596A0074A64E /* ViewController.swift in Sources */,
+				6791AEE62F08596A0074A64E /* AppDelegate.swift in Sources */,
+				6791AEE82F08596A0074A64E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEF02F08596A0074A64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF192F08596A0074A64E /* ViewController.swift in Sources */,
+				6791AEF72F08596A0074A64E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AEFC2F08596A0074A64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF1C2F08596A0074A64E /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6791AF062F08596A0074A64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791AF1D2F08596A0074A64E /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6791AF032F08596A0074A64E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6791AEFF2F08596A0074A64E /* darktechmeme Extension (iOS) */;
+			targetProxy = 6791AF022F08596A0074A64E /* PBXContainerItemProxy */;
+		};
+		6791AF0D2F08596A0074A64E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6791AF092F08596A0074A64E /* darktechmeme Extension (macOS) */;
+			targetProxy = 6791AF0C2F08596A0074A64E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6791AED52F0859690074A64E /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6791AED62F0859690074A64E /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		6791AEE92F08596A0074A64E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6791AEEA2F08596A0074A64E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6791AEEC2F08596A0074A64E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6791AEED2F08596A0074A64E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6791AEF82F08596A0074A64E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6791AEF92F08596A0074A64E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6791AF1E2F08596A0074A64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6791AF1F2F08596A0074A64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6791AF212F08596A0074A64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "darktechmeme Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_NAME = "darktechmeme Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6791AF222F08596A0074A64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "darktechmeme Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_NAME = "darktechmeme Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6791AF252F08596A0074A64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = darktechmeme;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_NAME = darktechmeme;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6791AF262F08596A0074A64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = darktechmeme;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_NAME = darktechmeme;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6791AF282F08596A0074A64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "darktechmeme Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_NAME = "darktechmeme Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6791AF292F08596A0074A64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "darktechmeme Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_NAME = "darktechmeme Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6791AF2C2F08596A0074A64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = darktechmeme;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_NAME = darktechmeme;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6791AF2D2F08596A0074A64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6R4G34R252;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = darktechmeme;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_NAME = darktechmeme;
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6791AED22F0859690074A64E /* Build configuration list for PBXProject "darktechmeme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791AF1E2F08596A0074A64E /* Debug */,
+				6791AF1F2F08596A0074A64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6791AF202F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791AF212F08596A0074A64E /* Debug */,
+				6791AF222F08596A0074A64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6791AF242F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791AF252F08596A0074A64E /* Debug */,
+				6791AF262F08596A0074A64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6791AF272F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791AF282F08596A0074A64E /* Debug */,
+				6791AF292F08596A0074A64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6791AF2B2F08596A0074A64E /* Build configuration list for PBXNativeTarget "darktechmeme (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6791AF2C2F08596A0074A64E /* Debug */,
+				6791AF2D2F08596A0074A64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6791AECF2F0859690074A64E /* Project object */;
+}

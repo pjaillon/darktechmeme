@@ -1,0 +1,141 @@
+.dtm-dark,
+.dtm-dark body {
+  background-color: #0b0f14 !important;
+  color: #d6dde6 !important;
+  color-scheme: dark;
+}
+
+html.dtm-dark body a {
+  color: #e4e7eb !important;
+}
+
+html.dtm-dark body a * {
+  color: inherit !important;
+}
+
+html.dtm-dark body a:visited {
+  color: #cfd4da !important;
+}
+
+html.dtm-dark body a:hover,
+html.dtm-dark body a:active {
+  color: #f2f4f6 !important;
+}
+
+html.dtm-dark body .L1 a,
+html.dtm-dark body .L2 a,
+html.dtm-dark body .L5 a,
+html.dtm-dark body a.ourh,
+html.dtm-dark body .item .ourh,
+html.dtm-dark body .ii a.ourh,
+html.dtm-dark body .ii .L1 a,
+html.dtm-dark body .ii .L2 a,
+html.dtm-dark body .ii .L5 a,
+html.dtm-dark body a.ourh.ourh {
+  color: #e4e7eb !important;
+}
+
+html.dtm-dark body .L1 a:visited,
+html.dtm-dark body .L2 a:visited,
+html.dtm-dark body .L5 a:visited,
+html.dtm-dark body a.ourh:visited,
+html.dtm-dark body .item .ourh:visited,
+html.dtm-dark body .ii a.ourh:visited,
+html.dtm-dark body .ii .L1 a:visited,
+html.dtm-dark body .ii .L2 a:visited,
+html.dtm-dark body .ii .L5 a:visited,
+html.dtm-dark body a.ourh.ourh:visited {
+  color: #cfd4da !important;
+}
+
+.dtm-dark td,
+.dtm-dark th,
+.dtm-dark table,
+.dtm-dark tbody,
+.dtm-dark thead,
+.dtm-dark tfoot,
+.dtm-dark tr,
+.dtm-dark div,
+.dtm-dark section,
+.dtm-dark header,
+.dtm-dark footer,
+.dtm-dark nav {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.dtm-dark img,
+.dtm-dark video,
+.dtm-dark svg {
+  background-color: transparent !important;
+}
+
+.dtm-dark .itc1:hover,
+.dtm-dark .itc1:hover .item,
+.dtm-dark .itc1:hover .ii,
+.dtm-dark .itc1:hover .ii * ,
+.dtm-dark .item:hover,
+.dtm-dark .item:hover * ,
+.dtm-dark .rhov,
+.dtm-dark .rhov * {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.dtm-dark .rhov {
+  background-color: rgba(12, 16, 22, 0.92) !important;
+  border: 1px solid #2a3446 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+.dtm-dark .rhov,
+.dtm-dark .rhov * {
+  color: #e4e7eb !important;
+}
+
+.dtm-dark .rhov a {
+  color: #e4e7eb !important;
+}
+
+.dtm-dark .ditemexcerptcontainer {
+  background-color: #0f141c !important;
+  opacity: 1 !important;
+  z-index: 1000 !important;
+}
+
+.dtm-dark .ditemexcerpt {
+  background-color: #0f141c !important;
+  border-color: #2a3446 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55) !important;
+  color: #e4e7eb !important;
+  opacity: 1 !important;
+}
+
+.dtm-dark .ditemexcerpt * {
+  background-color: #0f141c !important;
+  color: inherit !important;
+}
+
+.dtm-dark .ditemexcerptcontainer * {
+  background-color: #0f141c !important;
+  color: #e4e7eb !important;
+}
+
+html.dtm-dark body .item:hover .ditemexcerptcontainer,
+html.dtm-dark body .item:hover .ditemexcerpt,
+html.dtm-dark body .item:hover .ditemexcerpt * {
+  background-color: #0f141c !important;
+  color: #e4e7eb !important;
+}
+
+.dtm-dark input,
+.dtm-dark textarea,
+.dtm-dark select {
+  background-color: #111723 !important;
+  color: #d6dde6 !important;
+  border-color: #2a3446 !important;
+}
+
+.dtm-dark hr {
+  border-color: #2a3446 !important;
+}
