@@ -4,8 +4,7 @@ Safari Web Extension that applies a dark-mode theme to techmeme.com on macOS (an
 
 Example:
 
-<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/2e083b67-460b-4e02-9823-d7c1c94ea740" />
-
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/2d316be1-605a-43c3-a41a-32f8f07f8491" />
 
 ## Project layout
 - `darktechmeme/` — web extension source (manifest, CSS, icons)
