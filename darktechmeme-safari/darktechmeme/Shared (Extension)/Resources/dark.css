@@ -3,6 +3,11 @@
   background-color: #0b0f14 !important;
   color: #d6dde6 !important;
   color-scheme: dark;
+  --dtm-sentiment-strong-negative: #d04848;
+  --dtm-sentiment-negative: #df7a3a;
+  --dtm-sentiment-neutral: #6f7d8c;
+  --dtm-sentiment-positive: #4fb06d;
+  --dtm-sentiment-strong-positive: #2f9b86;
 }
 
 html.dtm-dark body a {
@@ -20,6 +25,47 @@ html.dtm-dark body a:visited {
 html.dtm-dark body a:hover,
 html.dtm-dark body a:active {
   color: #f2f4f6 !important;
+}
+
+html.dtm-dark body a.dtm-sentiment {
+  border-left: 4px solid var(--dtm-sentiment-neutral);
+  display: inline-block;
+  padding-left: 8px;
+}
+
+html.dtm-dark body a.dtm-sentiment-strong-negative {
+  border-left-color: var(--dtm-sentiment-strong-negative);
+}
+
+html.dtm-dark body a.dtm-sentiment-negative {
+  border-left-color: var(--dtm-sentiment-negative);
+}
+
+html.dtm-dark body a.dtm-sentiment-neutral {
+  border-left-color: var(--dtm-sentiment-neutral);
+}
+
+html.dtm-dark body a.dtm-sentiment-positive {
+  border-left-color: var(--dtm-sentiment-positive);
+}
+
+html.dtm-dark body a.dtm-sentiment-strong-positive {
+  border-left-color: var(--dtm-sentiment-strong-positive);
+}
+
+html.dtm-dark body .dtm-mediagazer {
+  color: #0b0f14 !important;
+}
+
+html.dtm-dark body .dtm-mediagazer * {
+  color: inherit !important;
+}
+
+html.dtm-dark body a.dtm-mediagazer,
+html.dtm-dark body a.dtm-mediagazer:visited,
+html.dtm-dark body a.dtm-mediagazer:hover,
+html.dtm-dark body a.dtm-mediagazer:active {
+  color: #0b0f14 !important;
 }
 
 html.dtm-dark body .L1 a,
