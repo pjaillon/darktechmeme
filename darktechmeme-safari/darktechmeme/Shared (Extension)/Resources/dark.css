@@ -4,10 +4,10 @@
   color: #d6dde6 !important;
   color-scheme: dark;
   --dtm-sentiment-strong-negative: #d04848;
-  --dtm-sentiment-negative: #df7a3a;
-  --dtm-sentiment-neutral: #6f7d8c;
-  --dtm-sentiment-positive: #4fb06d;
-  --dtm-sentiment-strong-positive: #2f9b86;
+  --dtm-sentiment-negative: #c88b3a;
+  --dtm-sentiment-neutral: #7a8896;
+  --dtm-sentiment-positive: #58b77a;
+  --dtm-sentiment-strong-positive: #38a28d;
 }
 
 html.dtm-dark body a {
