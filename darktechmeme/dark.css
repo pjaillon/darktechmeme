@@ -29,7 +29,6 @@ html.dtm-dark body a:active {
 
 html.dtm-dark body a.dtm-sentiment {
   border-left: 4px solid var(--dtm-sentiment-neutral);
-  display: inline-block;
   padding-left: 8px;
 }
 
