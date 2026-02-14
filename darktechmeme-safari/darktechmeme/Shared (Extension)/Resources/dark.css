@@ -28,28 +28,43 @@ html.dtm-dark body a:active {
 }
 
 html.dtm-dark body a.dtm-sentiment {
-  border-left: 4px solid var(--dtm-sentiment-neutral);
-  padding-left: 8px;
+  --dtm-current-sentiment-color: var(--dtm-sentiment-neutral);
 }
 
 html.dtm-dark body a.dtm-sentiment-strong-negative {
-  border-left-color: var(--dtm-sentiment-strong-negative);
+  --dtm-current-sentiment-color: var(--dtm-sentiment-strong-negative);
 }
 
 html.dtm-dark body a.dtm-sentiment-negative {
-  border-left-color: var(--dtm-sentiment-negative);
+  --dtm-current-sentiment-color: var(--dtm-sentiment-negative);
 }
 
 html.dtm-dark body a.dtm-sentiment-neutral {
-  border-left-color: var(--dtm-sentiment-neutral);
+  --dtm-current-sentiment-color: var(--dtm-sentiment-neutral);
 }
 
 html.dtm-dark body a.dtm-sentiment-positive {
-  border-left-color: var(--dtm-sentiment-positive);
+  --dtm-current-sentiment-color: var(--dtm-sentiment-positive);
 }
 
 html.dtm-dark body a.dtm-sentiment-strong-positive {
-  border-left-color: var(--dtm-sentiment-strong-positive);
+  --dtm-current-sentiment-color: var(--dtm-sentiment-strong-positive);
+}
+
+html.dtm-dark body a.ourh.dtm-sentiment,
+html.dtm-dark body .L1 a.dtm-sentiment,
+html.dtm-dark body .L2 a.dtm-sentiment,
+html.dtm-dark body .L5 a.dtm-sentiment {
+  display: inline-block !important;
+  max-width: 100%;
+  border-left: 4px solid var(--dtm-current-sentiment-color) !important;
+  padding-left: 8px !important;
+}
+
+html.dtm-dark body a.item.dtm-sentiment .title {
+  display: block;
+  border-left: 4px solid var(--dtm-current-sentiment-color) !important;
+  padding-left: 8px !important;
 }
 
 html.dtm-dark body .dtm-mediagazer {

@@ -94,7 +94,7 @@
     "scam",
   ];
 
-  const headlineSelector = "a.ourh, .L1 a, .L2 a, .L5 a";
+  const headlineSelector = "a.ourh, .L1 a, .L2 a, .L5 a, a.item";
   const feedCardSelector = ".item, .ii, .itc1, .itc2, .itc3";
   const mobileTabLabels = new Set(["top", "more", "new", "events"]);
   const mobileTabElementSelector = "a, button, td, th, div, span";
@@ -200,7 +200,26 @@
       return;
     }
 
-    const text = anchor.textContent ? anchor.textContent.trim() : "";
+    let text = "";
+
+    if (anchor.classList.contains("item")) {
+      if (anchor.closest("li.sp_post") || anchor.querySelector(".sp_post_label")) {
+        return;
+      }
+
+      const title = anchor.querySelector(".title");
+      text = title && title.textContent ? title.textContent.trim() : "";
+    } else {
+      const parentClass = anchor.parentElement && anchor.parentElement.className
+        ? String(anchor.parentElement.className)
+        : "";
+      const isLikelyHeadline = anchor.classList.contains("ourh") || /\bL[125]\b/.test(parentClass);
+      if (!isLikelyHeadline) {
+        return;
+      }
+      text = anchor.textContent ? anchor.textContent.trim() : "";
+    }
+
     if (!text) {
       return;
     }
