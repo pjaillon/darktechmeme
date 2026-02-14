@@ -4,10 +4,10 @@
   color: #d6dde6 !important;
   color-scheme: dark;
   --dtm-sentiment-strong-negative: #d04848;
-  --dtm-sentiment-negative: #c88b3a;
-  --dtm-sentiment-neutral: #7a8896;
-  --dtm-sentiment-positive: #58b77a;
-  --dtm-sentiment-strong-positive: #38a28d;
+  --dtm-sentiment-negative: #df7a3a;
+  --dtm-sentiment-neutral: #6f7d8c;
+  --dtm-sentiment-positive: #4fb06d;
+  --dtm-sentiment-strong-positive: #2f9b86;
 }
 
 html.dtm-dark body a {
@@ -183,4 +183,103 @@ html.dtm-dark body .item:hover .ditemexcerpt * {
 
 .dtm-dark hr {
   border-color: #2a3446 !important;
+}
+
+/* Mobile feed cards and sponsored rows that still render with light backgrounds */
+.dtm-dark .item,
+.dtm-dark .ii,
+.dtm-dark .itc1,
+.dtm-dark .itc2,
+.dtm-dark .itc3,
+.dtm-dark [class*="sponsor"],
+.dtm-dark [id*="sponsor"] {
+  background-color: #0f141c !important;
+  color: #d6dde6 !important;
+}
+
+/* Embedded quote/social blocks frequently ship with fixed light backgrounds */
+.dtm-dark blockquote,
+.dtm-dark [class*="embed"],
+.dtm-dark [class*="tweet"],
+.dtm-dark [id*="tweet"],
+.dtm-dark [class*="bluesky"] {
+  background-color: #0f141c !important;
+  border-color: #2a3446 !important;
+  color: #d6dde6 !important;
+}
+
+/* Catch inline light backgrounds inside primary feed containers on mobile */
+.dtm-dark .item [style*="background"],
+.dtm-dark .ii [style*="background"] {
+  background-color: #0f141c !important;
+  color: #d6dde6 !important;
+}
+
+/* Explicit sponsor row treatment to remove bright card contours on mobile */
+.dtm-dark .dtm-sponsored-card,
+.dtm-dark .dtm-sponsored-card td,
+.dtm-dark .dtm-sponsored-card th,
+.dtm-dark .dtm-sponsored-card div,
+.dtm-dark .dtm-sponsored-card section,
+.dtm-dark .dtm-sponsored-card article,
+.dtm-dark .dtm-sponsored-card span,
+.dtm-dark .dtm-sponsored-shell,
+.dtm-dark .dtm-sponsored-shell td,
+.dtm-dark .dtm-sponsored-shell th,
+.dtm-dark .dtm-sponsored-shell div,
+.dtm-dark .dtm-sponsored-shell section,
+.dtm-dark .dtm-sponsored-shell article,
+.dtm-dark .dtm-sponsored-shell span {
+  background-color: #111825 !important;
+  color: #d6dde6 !important;
+  border-color: #223247 !important;
+  box-shadow: none !important;
+}
+
+.dtm-dark .dtm-sponsored-card a,
+.dtm-dark .dtm-sponsored-card a:visited,
+.dtm-dark .dtm-sponsored-card a:hover,
+.dtm-dark .dtm-sponsored-card a:active,
+.dtm-dark .dtm-sponsored-shell a,
+.dtm-dark .dtm-sponsored-shell a:visited,
+.dtm-dark .dtm-sponsored-shell a:hover,
+.dtm-dark .dtm-sponsored-shell a:active {
+  color: #dce3ee !important;
+}
+
+.dtm-dark .dtm-sponsored-card [bgcolor],
+.dtm-dark .dtm-sponsored-card [style*="background"],
+.dtm-dark .dtm-sponsored-shell [bgcolor],
+.dtm-dark .dtm-sponsored-shell [style*="background"] {
+  background-color: #111825 !important;
+  color: #d6dde6 !important;
+  border-color: #223247 !important;
+}
+
+.dtm-dark .dtm-sponsored-shell::before,
+.dtm-dark .dtm-sponsored-shell::after {
+  background-color: #111825 !important;
+  border-color: #223247 !important;
+}
+
+/* Mobile Top/More/New/Events tabs: style native Techmeme active class */
+.dtm-dark .tabs_bar {
+  background: linear-gradient(180deg, #13314a, #10283d) !important;
+  border-top: 1px solid #2a4e6f !important;
+  border-bottom: 1px solid #2a4e6f !important;
+}
+
+.dtm-dark .tabs_bar .tab_selector,
+.dtm-dark .tabs_bar .tab_selector:visited {
+  background: transparent !important;
+  color: #b7c9dc !important;
+  text-shadow: none !important;
+}
+
+.dtm-dark .tabs_bar .active_tab_selector,
+.dtm-dark .tabs_bar .active_tab_selector:visited {
+  background: linear-gradient(180deg, #2f668c, #234f71) !important;
+  color: #eef6ff !important;
+  font-weight: 700 !important;
+  box-shadow: inset 0 -2px 0 rgba(165, 210, 244, 0.55) !important;
 }
