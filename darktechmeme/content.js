@@ -226,6 +226,13 @@
 
     const bucketClass = bucketForScore(scoreHeadline(text));
     anchor.classList.add("dtm-sentiment", bucketClass);
+
+    if (!anchor.classList.contains("item")) {
+      const parent = anchor.parentElement;
+      if (parent && parent.tagName === "STRONG") {
+        parent.classList.add("dtm-sentiment", bucketClass);
+      }
+    }
   };
 
   const applyMediagazerStyles = (element) => {

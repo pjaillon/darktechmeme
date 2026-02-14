@@ -27,36 +27,32 @@ html.dtm-dark body a:active {
   color: #f2f4f6 !important;
 }
 
-html.dtm-dark body a.dtm-sentiment {
+html.dtm-dark body .dtm-sentiment {
   --dtm-current-sentiment-color: var(--dtm-sentiment-neutral);
 }
 
-html.dtm-dark body a.dtm-sentiment-strong-negative {
+html.dtm-dark body .dtm-sentiment-strong-negative {
   --dtm-current-sentiment-color: var(--dtm-sentiment-strong-negative);
 }
 
-html.dtm-dark body a.dtm-sentiment-negative {
+html.dtm-dark body .dtm-sentiment-negative {
   --dtm-current-sentiment-color: var(--dtm-sentiment-negative);
 }
 
-html.dtm-dark body a.dtm-sentiment-neutral {
+html.dtm-dark body .dtm-sentiment-neutral {
   --dtm-current-sentiment-color: var(--dtm-sentiment-neutral);
 }
 
-html.dtm-dark body a.dtm-sentiment-positive {
+html.dtm-dark body .dtm-sentiment-positive {
   --dtm-current-sentiment-color: var(--dtm-sentiment-positive);
 }
 
-html.dtm-dark body a.dtm-sentiment-strong-positive {
+html.dtm-dark body .dtm-sentiment-strong-positive {
   --dtm-current-sentiment-color: var(--dtm-sentiment-strong-positive);
 }
 
-html.dtm-dark body a.ourh.dtm-sentiment,
-html.dtm-dark body .L1 a.dtm-sentiment,
-html.dtm-dark body .L2 a.dtm-sentiment,
-html.dtm-dark body .L5 a.dtm-sentiment {
-  display: inline-block !important;
-  max-width: 100%;
+html.dtm-dark body strong.dtm-sentiment {
+  display: block !important;
   border-left: 4px solid var(--dtm-current-sentiment-color) !important;
   padding-left: 8px !important;
 }
