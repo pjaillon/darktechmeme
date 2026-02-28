@@ -1,0 +1,24 @@
+# United — Caddy reverse proxy config
+# Domains: matrix.cleardis.com | app.cleardis.com | join.cleardis.com
+
+# Matrix homeserver (Synapse)
+matrix.cleardis.com {
+    reverse_proxy synapse:8008
+
+    # Required for Matrix federation & .well-known
+    header /_matrix/* {
+        Access-Control-Allow-Origin *
+        Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    }
+}
+
+# Element Web client
+app.cleardis.com {
+    reverse_proxy element:80
+}
+
+# Invite portal
+join.cleardis.com {
+    reverse_proxy invite-portal:80
+}

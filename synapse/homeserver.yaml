@@ -1,0 +1,73 @@
+# United — Synapse homeserver configuration
+# Docs: https://matrix-org.github.io/synapse/latest/usage/configuration/config_documentation.html
+
+server_name: "matrix.cleardis.com"
+pid_file: /data/homeserver.pid
+
+listeners:
+  - port: 8008
+    tls: false
+    type: http
+    x_forwarded: true
+    resources:
+      - names: [client, federation]
+        compress: false
+
+# Database
+database:
+  name: psycopg2
+  args:
+    user: synapse
+    password: "${POSTGRES_PASSWORD}"
+    database: synapse
+    host: postgres
+    cp_min: 5
+    cp_max: 10
+
+# Media storage
+media_store_path: /data/media_store
+max_upload_size: 50M
+
+# Logging
+log_config: "/data/log.config"
+
+# Signing key (generated on first run)
+signing_key_path: "/data/matrix.cleardis.com.signing.key"
+
+# --------------------------------------------------------------------------
+# Registration — invite-only via tokens
+# --------------------------------------------------------------------------
+enable_registration: false
+registration_requires_token: true
+allow_guest_access: false
+
+# --------------------------------------------------------------------------
+# Privacy & federation — closed server, no external connections
+# --------------------------------------------------------------------------
+federation_domain_whitelist: []
+allow_public_rooms_over_federation: false
+allow_public_rooms_without_auth: false
+enable_3pid_lookup: false
+report_stats: false
+
+# --------------------------------------------------------------------------
+# Encryption — E2E on by default for all rooms
+# --------------------------------------------------------------------------
+encryption_enabled_by_default_for_room_type: all
+
+# --------------------------------------------------------------------------
+# Push notifications (optional — configure per client later)
+# --------------------------------------------------------------------------
+push:
+  include_content: false
+
+# --------------------------------------------------------------------------
+# Rate limiting — relaxed for small family use
+# --------------------------------------------------------------------------
+rc_message:
+  per_second: 10
+  burst_count: 20
+
+rc_registration:
+  per_second: 0.1
+  burst_count: 3
