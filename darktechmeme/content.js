@@ -685,15 +685,27 @@
     });
   };
 
+  const applyEnabledState = (enabled) => {
+    setThemeEnabled(Boolean(enabled));
+  };
+
   browser.runtime.onMessage.addListener((message) => {
     if (!message || message.type !== TOGGLE_MESSAGE) {
       return;
     }
-    setThemeEnabled(Boolean(message.enabled));
+    applyEnabledState(message.enabled);
+  });
+
+  browser.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName !== "local" || !changes[STORAGE_KEY]) {
+      return;
+    }
+    applyEnabledState(changes[STORAGE_KEY].newValue);
   });
 
   const initialize = async () => {
     darkModeEnabled = await getInitialEnabledState();
+    applyEnabledState(darkModeEnabled);
     start();
   };
 

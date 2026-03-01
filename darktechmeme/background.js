@@ -23,6 +23,11 @@ const TECHMEME_URL_RE = /^https?:\/\/([^.]+\.)?techmeme\.com(\/|$)/i;
 
 const isTechmemeUrl = (url) => TECHMEME_URL_RE.test(url || "");
 
+const getTechmemeTabs = async () => {
+  const tabs = await browser.tabs.query({});
+  return tabs.filter((tab) => typeof tab.id === "number" && isTechmemeUrl(tab.url));
+};
+
 const getEnabled = async () => {
   const result = await browser.storage.local.get(ENABLED_KEY);
   return result[ENABLED_KEY] !== false;
@@ -58,14 +63,10 @@ const setIconAndTitleForTab = async (tab) => {
 };
 
 const broadcastEnabledState = async (enabled) => {
-  const tabs = await browser.tabs.query({
-    url: ["*://techmeme.com/*", "*://www.techmeme.com/*", "*://*.techmeme.com/*"],
-  });
+  const tabs = await getTechmemeTabs();
 
   await Promise.all(
-    tabs
-      .filter((tab) => typeof tab.id === "number")
-      .map((tab) => browser.tabs.sendMessage(tab.id, { type: TOGGLE_MESSAGE, enabled }).catch(() => undefined))
+    tabs.map((tab) => browser.tabs.sendMessage(tab.id, { type: TOGGLE_MESSAGE, enabled }).catch(() => undefined))
   );
 };
 
@@ -83,6 +84,7 @@ const toggleEnabledFromToolbarClick = async (tab) => {
   const current = await getEnabled();
   const next = !current;
   await setEnabled(next);
+  await browser.tabs.sendMessage(tab.id, { type: TOGGLE_MESSAGE, enabled: next }).catch(() => undefined);
   await Promise.all([refreshAllTabIcons(), broadcastEnabledState(next)]);
 };
 
@@ -122,5 +124,15 @@ browser.runtime.onStartup.addListener(
   runSafe(async () => {
     await ensureEnabledDefault();
     await refreshAllTabIcons();
+  })
+);
+
+browser.storage.onChanged.addListener(
+  runSafe(async (changes, areaName) => {
+    if (areaName !== "local" || !changes[ENABLED_KEY]) {
+      return;
+    }
+    const enabled = changes[ENABLED_KEY].newValue !== false;
+    await Promise.all([refreshAllTabIcons(), broadcastEnabledState(enabled)]);
   })
 );
