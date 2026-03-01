@@ -11,9 +11,23 @@
     "256": "icons/icon-256.png",
     "512": "icons/icon-512.png"
   },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
     "default_title": "darktechmeme",
-    "default_popup": "popup.html"
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png",
+      "256": "icons/icon-256.png",
+      "512": "icons/icon-512.png"
+    }
   },
   "content_scripts": [
     {

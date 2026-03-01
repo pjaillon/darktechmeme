@@ -37,8 +37,10 @@
 		6791AF382F08596A0074A64E /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF302F08596A0074A64E /* icons */; };
 		6791AF392F08596A0074A64E /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF312F08596A0074A64E /* manifest.json */; };
 		6791AF3A2F08596A0074A64E /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF322F08596A0074A64E /* content.js */; };
-		6791AF3B2F08596A0074A64E /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF3D2F08596A0074A64E /* popup.html */; };
-		6791AF3C2F08596A0074A64E /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF3D2F08596A0074A64E /* popup.html */; };
+		6791AF3E2F08596A0074A64E /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF422F08596A0074A64E /* background.js */; };
+		6791AF3F2F08596A0074A64E /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF422F08596A0074A64E /* background.js */; };
+		6791AF402F08596A0074A64E /* icons-light in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF432F08596A0074A64E /* icons-light */; };
+		6791AF412F08596A0074A64E /* icons-light in Resources */ = {isa = PBXBuildFile; fileRef = 6791AF432F08596A0074A64E /* icons-light */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +111,8 @@
 		6791AF302F08596A0074A64E /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = Resources/icons; sourceTree = "<group>"; };
 		6791AF312F08596A0074A64E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
 		6791AF322F08596A0074A64E /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
-		6791AF3D2F08596A0074A64E /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = Resources/popup.html; sourceTree = "<group>"; };
+		6791AF422F08596A0074A64E /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
+		6791AF432F08596A0074A64E /* icons-light */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "icons-light"; path = Resources/icons-light; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,8 +244,9 @@
 			children = (
 				6791AF2F2F08596A0074A64E /* dark.css */,
 				6791AF302F08596A0074A64E /* icons */,
+				6791AF432F08596A0074A64E /* icons-light */,
 				6791AF312F08596A0074A64E /* manifest.json */,
-				6791AF3D2F08596A0074A64E /* popup.html */,
+				6791AF422F08596A0074A64E /* background.js */,
 				6791AF322F08596A0074A64E /* content.js */,
 			);
 			name = Resources;
@@ -413,7 +417,8 @@
 				6791AF3A2F08596A0074A64E /* content.js in Resources */,
 				6791AF372F08596A0074A64E /* dark.css in Resources */,
 				6791AF392F08596A0074A64E /* manifest.json in Resources */,
-				6791AF3B2F08596A0074A64E /* popup.html in Resources */,
+				6791AF3E2F08596A0074A64E /* background.js in Resources */,
+				6791AF402F08596A0074A64E /* icons-light in Resources */,
 				6791AF382F08596A0074A64E /* icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +430,8 @@
 				6791AF362F08596A0074A64E /* content.js in Resources */,
 				6791AF332F08596A0074A64E /* dark.css in Resources */,
 				6791AF352F08596A0074A64E /* manifest.json in Resources */,
-				6791AF3C2F08596A0074A64E /* popup.html in Resources */,
+				6791AF3F2F08596A0074A64E /* background.js in Resources */,
+				6791AF412F08596A0074A64E /* icons-light in Resources */,
 				6791AF342F08596A0074A64E /* icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

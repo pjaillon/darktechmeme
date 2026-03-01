@@ -1,5 +1,19 @@
 (() => {
+  const STORAGE_KEY = "dtmEnabled";
+  const TOGGLE_MESSAGE = "dtm-set-enabled";
+  let darkModeEnabled = true;
+
   const ensureThemeRoot = () => {
+    if (!darkModeEnabled) {
+      if (document.documentElement) {
+        document.documentElement.classList.remove("dtm-dark");
+      }
+      if (document.body) {
+        document.body.classList.remove("dtm-dark");
+      }
+      return;
+    }
+
     if (document.documentElement) {
       document.documentElement.classList.add("dtm-dark");
     }
@@ -9,6 +23,14 @@
   };
 
   const ensureFallbackStyles = () => {
+    if (!darkModeEnabled) {
+      const style = document.getElementById("dtm-inline-fallback");
+      if (style) {
+        style.remove();
+      }
+      return;
+    }
+
     if (document.getElementById("dtm-inline-fallback")) {
       return;
     }
@@ -30,8 +52,6 @@
     ensureThemeRoot();
     ensureFallbackStyles();
   };
-
-  ensureTheme();
 
   const positiveWords = [
     "accelerate",
@@ -105,6 +125,14 @@
     "dtm-sentiment-positive",
     "dtm-sentiment-strong-positive",
   ];
+  const removableRuntimeClasses = [
+    "dtm-sentiment",
+    ...sentimentClasses,
+    "dtm-mediagazer",
+    "dtm-sponsored-card",
+    "dtm-sponsored-shell",
+  ];
+  const removableRuntimeSelector = removableRuntimeClasses.map((className) => `.${className}`).join(", ");
   const mediagazerText = "see also mediagazer";
   const sponsorTextMarkers = ["sponsor post", "sponsored"];
   const sponsorContainerSelector = `${feedCardSelector}, tr, td, table`;
@@ -143,6 +171,38 @@
       if (tab instanceof HTMLElement && tab.dataset.dtmTabBound) {
         delete tab.dataset.dtmTabBound;
       }
+    }
+  };
+
+  const clearRuntimeClasses = () => {
+    const markedNodes = document.querySelectorAll(removableRuntimeSelector);
+    for (const node of markedNodes) {
+      node.classList.remove(...removableRuntimeClasses);
+    }
+  };
+
+  const setThemeEnabled = (enabled) => {
+    darkModeEnabled = enabled;
+
+    if (!darkModeEnabled) {
+      ensureThemeRoot();
+      ensureFallbackStyles();
+      clearLegacyTabClasses();
+      clearRuntimeClasses();
+      return;
+    }
+
+    ensureTheme();
+    clearLegacyTabClasses();
+    scan(document);
+  };
+
+  const getInitialEnabledState = async () => {
+    try {
+      const stored = await browser.storage.local.get(STORAGE_KEY);
+      return stored[STORAGE_KEY] !== false;
+    } catch (_error) {
+      return true;
     }
   };
 
@@ -196,6 +256,10 @@
   };
 
   const applySentiment = (anchor) => {
+    if (!darkModeEnabled) {
+      return;
+    }
+
     if (anchor.classList.contains("dtm-sentiment")) {
       return;
     }
@@ -236,6 +300,10 @@
   };
 
   const applyMediagazerStyles = (element) => {
+    if (!darkModeEnabled) {
+      return;
+    }
+
     if (!element || element.classList.contains("dtm-mediagazer")) {
       return;
     }
@@ -307,6 +375,10 @@
   };
 
   const applySponsorStyles = (element) => {
+    if (!darkModeEnabled) {
+      return;
+    }
+
     if (!element) {
       return;
     }
@@ -506,6 +578,10 @@
   };
 
   const styleMobileTabs = () => {
+    if (!darkModeEnabled) {
+      return;
+    }
+
     if (!enableMobileTabRuntimeStyling) {
       return;
     }
@@ -542,6 +618,10 @@
   };
 
   const scan = (root) => {
+    if (!darkModeEnabled) {
+      return;
+    }
+
     if (!root.querySelectorAll) {
       return;
     }
@@ -562,9 +642,7 @@
   };
 
   const start = () => {
-    ensureTheme();
-    clearLegacyTabClasses();
-    scan(document);
+    setThemeEnabled(darkModeEnabled);
 
     const observer = new MutationObserver((mutations) => {
       ensureTheme();
@@ -602,15 +680,26 @@
     }, 100);
 
     window.addEventListener("pageshow", () => {
-      ensureTheme();
-      clearLegacyTabClasses();
+      setThemeEnabled(darkModeEnabled);
       styleMobileTabs();
     });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", start, { once: true });
-  } else {
+  browser.runtime.onMessage.addListener((message) => {
+    if (!message || message.type !== TOGGLE_MESSAGE) {
+      return;
+    }
+    setThemeEnabled(Boolean(message.enabled));
+  });
+
+  const initialize = async () => {
+    darkModeEnabled = await getInitialEnabledState();
     start();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialize, { once: true });
+  } else {
+    initialize();
   }
 })();
