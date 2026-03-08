@@ -16,7 +16,7 @@ import SafariServices
 typealias PlatformViewController = NSViewController
 #endif
 
-let extensionBundleIdentifier = "com.darktechmeme.safari.Extension"
+let extensionBundleIdentifier = "com.cleardis.darktechmeme.Extension"
 
 class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
@@ -66,12 +66,14 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
         }
 
         SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
-            guard error == nil else {
-                // Insert code to inform the user that something went wrong.
-                return
-            }
-
             DispatchQueue.main.async {
+                if let error = error {
+                    // Fallback: open Safari Extensions settings directly
+                    if let url = URL(string: "x-apple.systempreferences:com.apple.Safari.SFSafariExtensions") {
+                        NSWorkspace.shared.open(url)
+                    }
+                }
+
                 NSApp.terminate(self)
             }
         }

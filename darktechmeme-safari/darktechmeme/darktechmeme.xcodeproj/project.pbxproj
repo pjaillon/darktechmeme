@@ -112,7 +112,7 @@
 		6791AF312F08596A0074A64E /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = Resources/manifest.json; sourceTree = "<group>"; };
 		6791AF322F08596A0074A64E /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = Resources/content.js; sourceTree = "<group>"; };
 		6791AF422F08596A0074A64E /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = Resources/background.js; sourceTree = "<group>"; };
-		6791AF432F08596A0074A64E /* icons-light */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "icons-light"; path = Resources/icons-light; sourceTree = "<group>"; };
+		6791AF432F08596A0074A64E /* icons-light */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "icons-light"; path = "Resources/icons-light"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -655,12 +655,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-					PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
 				PRODUCT_NAME = "darktechmeme Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -689,12 +689,12 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-					PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
 				PRODUCT_NAME = "darktechmeme Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -730,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -772,7 +772,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -812,12 +812,12 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
 				PRODUCT_NAME = "darktechmeme Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -851,12 +851,12 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme.Extension;
 				PRODUCT_NAME = "darktechmeme Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = NO;
@@ -895,14 +895,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme;
 				PRODUCT_NAME = darktechmeme;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
@@ -939,14 +939,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.darktechmeme.safari;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cleardis.darktechmeme;
 				PRODUCT_NAME = darktechmeme;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;

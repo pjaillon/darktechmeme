@@ -138,6 +138,14 @@ html.dtm-dark body a.ourh.ourh:visited {
   color: inherit !important;
 }
 
+/* River hover highlight: override Techmeme's light blue hover */
+.dtm-dark .ed a:hover,
+.dtm-dark .icon16cont a:hover {
+  background: #1a2233 !important;
+  outline-color: #1a2233 !important;
+  color: #e4e7eb !important;
+}
+
 .dtm-dark .rhov {
   background-color: rgba(12, 16, 22, 0.92) !important;
   border: 1px solid #2a3446 !important;
