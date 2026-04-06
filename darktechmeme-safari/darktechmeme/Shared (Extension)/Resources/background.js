@@ -1,5 +1,10 @@
 const ENABLED_KEY = "dtmEnabled";
 const TOGGLE_MESSAGE = "dtm-set-enabled";
+const TECHMEME_MATCH_PATTERNS = [
+  "*://techmeme.com/*",
+  "*://www.techmeme.com/*",
+  "*://*.techmeme.com/*",
+];
 
 const ON_ICONS = {
   16: "icons/icon-16.png",
@@ -24,8 +29,8 @@ const TECHMEME_URL_RE = /^https?:\/\/([^.]+\.)?techmeme\.com(\/|$)/i;
 const isTechmemeUrl = (url) => TECHMEME_URL_RE.test(url || "");
 
 const getTechmemeTabs = async () => {
-  const tabs = await browser.tabs.query({});
-  return tabs.filter((tab) => typeof tab.id === "number" && isTechmemeUrl(tab.url));
+  const tabs = await browser.tabs.query({ url: TECHMEME_MATCH_PATTERNS });
+  return tabs.filter((tab) => typeof tab.id === "number");
 };
 
 const getEnabled = async () => {
@@ -62,6 +67,13 @@ const setIconAndTitleForTab = async (tab) => {
   ]);
 };
 
+const setDefaultIconAndTitle = async () => {
+  await Promise.all([
+    browser.action.setIcon({ path: OFF_ICONS }),
+    browser.action.setTitle({ title: "Open techmeme.com to toggle darktechmeme." }),
+  ]);
+};
+
 const broadcastEnabledState = async (enabled) => {
   const tabs = await getTechmemeTabs();
 
@@ -71,7 +83,7 @@ const broadcastEnabledState = async (enabled) => {
 };
 
 const refreshAllTabIcons = async () => {
-  const tabs = await browser.tabs.query({});
+  const tabs = await getTechmemeTabs();
   await Promise.all(tabs.map((tab) => setIconAndTitleForTab(tab)));
 };
 
@@ -96,19 +108,23 @@ const runSafe = (fn) => (...args) => {
 
 browser.action.onClicked.addListener(runSafe(toggleEnabledFromToolbarClick));
 
-browser.tabs.onActivated.addListener(
-  runSafe(async ({ tabId }) => {
-    const tab = await browser.tabs.get(tabId);
-    await setIconAndTitleForTab(tab);
-  })
-);
-
 browser.tabs.onUpdated.addListener(
   runSafe(async (tabId, changeInfo, tab) => {
     if (!changeInfo.url && changeInfo.status !== "complete") {
       return;
     }
-    await setIconAndTitleForTab(tab);
+
+    if (isTechmemeUrl(tab.url)) {
+      await setIconAndTitleForTab(tab);
+      return;
+    }
+
+    if (typeof tabId === "number") {
+      await Promise.all([
+        browser.action.setIcon({ tabId, path: OFF_ICONS }),
+        browser.action.setTitle({ tabId, title: "Open techmeme.com to toggle darktechmeme." }),
+      ]);
+    }
   })
 );
 
@@ -116,6 +132,7 @@ browser.runtime.onInstalled.addListener(
   runSafe(async () => {
     await ensureEnabledDefault();
     const enabled = await getEnabled();
+    await setDefaultIconAndTitle();
     await Promise.all([refreshAllTabIcons(), broadcastEnabledState(enabled)]);
   })
 );
@@ -123,6 +140,7 @@ browser.runtime.onInstalled.addListener(
 browser.runtime.onStartup.addListener(
   runSafe(async () => {
     await ensureEnabledDefault();
+    await setDefaultIconAndTitle();
     await refreshAllTabIcons();
   })
 );
@@ -133,6 +151,7 @@ browser.storage.onChanged.addListener(
       return;
     }
     const enabled = changes[ENABLED_KEY].newValue !== false;
+    await setDefaultIconAndTitle();
     await Promise.all([refreshAllTabIcons(), broadcastEnabledState(enabled)]);
   })
 );
