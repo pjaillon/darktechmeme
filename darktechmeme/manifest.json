@@ -12,8 +12,7 @@
     "512": "icons/icon-512.png"
   },
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
