@@ -1,7 +1,19 @@
 (() => {
   const STORAGE_KEY = "dtmEnabled";
   const TOGGLE_MESSAGE = "dtm-set-enabled";
+  const CONTENT_READY_MESSAGE = "dtm-content-ready";
   let darkModeEnabled = true;
+
+  const notifyContentReady = () => {
+    try {
+      const sending = browser.runtime.sendMessage({ type: CONTENT_READY_MESSAGE });
+      if (sending && typeof sending.catch === "function") {
+        sending.catch(() => undefined);
+      }
+    } catch (_error) {
+      // Background may be asleep; the toolbar icon re-syncs on the next toggle.
+    }
+  };
 
   const ensureThemeRoot = () => {
     if (!darkModeEnabled) {
@@ -682,6 +694,7 @@
     window.addEventListener("pageshow", () => {
       setThemeEnabled(darkModeEnabled);
       styleMobileTabs();
+      notifyContentReady();
     });
   };
 
@@ -707,6 +720,7 @@
     darkModeEnabled = await getInitialEnabledState();
     applyEnabledState(darkModeEnabled);
     start();
+    notifyContentReady();
   };
 
   if (document.readyState === "loading") {

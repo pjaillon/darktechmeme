@@ -1,5 +1,6 @@
 const ENABLED_KEY = "dtmEnabled";
 const TOGGLE_MESSAGE = "dtm-set-enabled";
+const CONTENT_READY_MESSAGE = "dtm-content-ready";
 const TECHMEME_MATCH_PATTERNS = [
   "*://techmeme.com/*",
   "*://www.techmeme.com/*",
@@ -74,6 +75,22 @@ const setDefaultIconAndTitle = async () => {
   ]);
 };
 
+const setTechmemeIconForTab = async (tabId) => {
+  if (typeof tabId !== "number") {
+    return;
+  }
+
+  const enabled = await getEnabled();
+  const title = enabled
+    ? "darktechmeme is on. Click to turn off."
+    : "darktechmeme is off. Click to turn on.";
+
+  await Promise.all([
+    browser.action.setIcon({ tabId, path: enabled ? ON_ICONS : OFF_ICONS }),
+    browser.action.setTitle({ tabId, title }),
+  ]);
+};
+
 const broadcastEnabledState = async (enabled) => {
   const tabs = await getTechmemeTabs();
 
@@ -84,7 +101,7 @@ const broadcastEnabledState = async (enabled) => {
 
 const refreshAllTabIcons = async () => {
   const tabs = await getTechmemeTabs();
-  await Promise.all(tabs.map((tab) => setIconAndTitleForTab(tab)));
+  await Promise.all(tabs.map((tab) => setTechmemeIconForTab(tab.id)));
 };
 
 const toggleEnabledFromToolbarClick = async (tab) => {
@@ -108,25 +125,14 @@ const runSafe = (fn) => (...args) => {
 
 browser.action.onClicked.addListener(runSafe(toggleEnabledFromToolbarClick));
 
-browser.tabs.onUpdated.addListener(
-  runSafe(async (tabId, changeInfo, tab) => {
-    if (!changeInfo.url && changeInfo.status !== "complete") {
-      return;
-    }
-
-    if (isTechmemeUrl(tab.url)) {
-      await setIconAndTitleForTab(tab);
-      return;
-    }
-
-    if (typeof tabId === "number") {
-      await Promise.all([
-        browser.action.setIcon({ tabId, path: OFF_ICONS }),
-        browser.action.setTitle({ tabId, title: "Open techmeme.com to toggle darktechmeme." }),
-      ]);
-    }
-  })
-);
+browser.runtime.onMessage.addListener((message, sender) => {
+  if (!message || message.type !== CONTENT_READY_MESSAGE) {
+    return;
+  }
+  if (sender && sender.tab && typeof sender.tab.id === "number") {
+    runSafe(setTechmemeIconForTab)(sender.tab.id);
+  }
+});
 
 browser.runtime.onInstalled.addListener(
   runSafe(async () => {
